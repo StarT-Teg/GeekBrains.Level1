@@ -1,10 +1,5 @@
 package lesson_2;
 
-/*
-5. ** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
-*/
-
-
 public class task_2_5 {
 
     public static void main(String[] args) {
