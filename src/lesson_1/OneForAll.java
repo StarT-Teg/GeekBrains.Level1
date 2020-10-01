@@ -27,12 +27,29 @@ public class OneForAll {
 
     }
 
-    private static int calculate (int a, int b, int c, int d) { return a * (b + (c / d)); }
-    private static boolean compare (int a, int b){ return a+b > 10 && a+b <= 20; }
-    private static void evenOdd(int a){ System.out.println(a % 2 == 0 ? "Чёт!" : "Нечет!"); }
-    private static boolean negative (int a){return a < 0;}
-    private static void helloName (String a){ System.out.println("Привет, " + a + "!"); }
-    public boolean isLeapYear(int year) { return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)); }
+    private static int calculate(int a, int b, int c, int d) {
+        return a * (b + (c / d));
+    }
+
+    private static boolean compare(int a, int b) {
+        return a + b > 10 && a + b <= 20;
+    }
+
+    private static void evenOdd(int a) {
+        System.out.println(a % 2 == 0 ? "Чёт!" : "Нечет!");
+    }
+
+    private static boolean negative(int a) {
+        return a < 0;
+    }
+
+    private static void helloName(String a) {
+        System.out.println("Привет, " + a + "!");
+    }
+
+    public boolean isLeapYear(int year) {
+        return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
+    }
 
 
 }
