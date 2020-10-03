@@ -13,6 +13,7 @@ public class task_2_4 {
         for (byte i = 0; i < massive.length; i++) {
 
             massive[i][i] = 1;
+            massive[i][massive.length - i - 1] = 1;
 
             for (byte c = 0; c < rnd; c++) {
                 System.out.print(massive[i][c] + " ");
