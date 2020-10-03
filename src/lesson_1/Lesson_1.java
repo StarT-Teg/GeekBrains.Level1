@@ -13,7 +13,7 @@ package lesson_1;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-public class OneForAll {
+public class Lesson_1 {
 
     public static void main(String[] args) {
 
