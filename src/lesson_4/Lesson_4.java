@@ -31,6 +31,7 @@ public class Lesson_4 {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        // Выбор размеров поля
         while (true){
             System.out.println("Размер поля 3 | 5?");
             int answer = Integer.parseInt(reader.readLine());
@@ -54,6 +55,7 @@ public class Lesson_4 {
 
         firstFill();
 
+        // Выбор символа игрока
         while (true){
             System.out.println("Играем за крестики? y/n");
             String answer = reader.readLine();
@@ -65,6 +67,7 @@ public class Lesson_4 {
             else if (answer.equals("n")){
                 playerSymbol = '0';
 
+                // Т.к. ход бота от хода игрока отличается одним ходом, решил записать его сразу в выбор символа
                 System.out.println();
                 System.out.println("Ход бота!");
 
@@ -78,6 +81,7 @@ public class Lesson_4 {
             }
         }
 
+        // Алгорит игры
             while (!end){
                 System.out.println("Ход игрока!");
                 playerTurn();
@@ -97,7 +101,9 @@ public class Lesson_4 {
             }
     }
 
-    // Проверка на победу
+    // Все методы справедливы для полей 3х3 и 5х5 и любого символа игрока
+
+    // Общаяя проверка на победу
     static void checkWin () {
         if (    checkWinLine() ||
                 checkWinColumn() ||
@@ -265,6 +271,7 @@ public class Lesson_4 {
 
     }
 
+    // Механика хода игрока
     static void playerTurn() throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -282,6 +289,7 @@ public class Lesson_4 {
         field[x][y] = playerSymbol;
     }
 
+    // Механика хода бота
     static void AITurn(){
 
         int x;
@@ -298,7 +306,7 @@ public class Lesson_4 {
 
     }
 
-
+    // Проверка ячейки на валидность
     static boolean isCellValid (int x, int y){
 
 
@@ -318,7 +326,7 @@ public class Lesson_4 {
 
     }
 
-
+    // Заполнение массива. Используется один раз, но решил не захламлять Main
     private static void firstFill (){
 
         for (int i = 0; i < fieldSize; i++){
@@ -329,6 +337,7 @@ public class Lesson_4 {
         }
     }
 
+    // Отрисовка карты
     private static void drawMap (){
 
         System.out.println();
