@@ -29,11 +29,9 @@ public class BongoCat extends JFrame {
         bongoCat.setTitle("It's BONGO time!");
         bongoCat.setVisible(true);
 
-
-
         GridLayout layout = new GridLayout(1,2);
-        JPanel buttonsPanel = new JPanel(layout);
-        IMGPanel imgPanel = new IMGPanel();
+        JPanel buttonsPanel = new JPanel(layout); // Панель с кнопками
+        IMGPanel imgPanel = new IMGPanel(); // Панель с картинками
 
         JButton[] jbs = new JButton [2]; // Список кнопок
 
@@ -51,7 +49,7 @@ public class BongoCat extends JFrame {
             }
         });
 
-
+        // Создём кнопки
         jbs[1] = new JButton("Bongo right!"); // Создали кнопку
         buttonsPanel.add(jbs[1]); // добавление кнопки на форму
         jbs[1].addActionListener(new ActionListener() {
@@ -66,20 +64,23 @@ public class BongoCat extends JFrame {
             }
         });
 
+        // Добавляем созданные панели на окно
         bongoCat.add(imgPanel);
         bongoCat.add(buttonsPanel, BorderLayout.SOUTH);
 
     }
 
+    // Что отрисовывает панель
     private static void onRepaint (Graphics g){
 
         g.drawImage(default_bongo,0,0, null);
     }
 
+    // Отрисовка панели
     private static class IMGPanel extends JPanel{
         @Override
         protected void paintComponent(Graphics g) {
-            super.paintComponent(g); // Отрисует панель
+            super.paintComponent(g);
             onRepaint(g);
             repaint();
         }
